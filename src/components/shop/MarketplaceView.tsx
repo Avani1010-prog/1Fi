@@ -89,14 +89,14 @@ export const MarketplaceView: React.FC = () => {
       <div className="flex items-center justify-between pt-1">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight">Market Place</h2>
         
-        {/* Custom Rounded Dropdown Menu */}
+        {/* Custom Rounded Dropdown Menu (Exact match to Gurugram dropdown) */}
         <div className="relative">
           <button
             onClick={() => setIsSortOpen(!isSortOpen)}
-            className="bg-[#f7f3ff] border border-purple-200/90 rounded-full pl-3.5 pr-8 py-1.5 text-[11px] font-bold text-purple-700 shadow-sm flex items-center gap-1 hover:bg-purple-100 transition-all cursor-pointer"
+            className="bg-white border border-purple-300/90 rounded-full px-3 py-1 text-[13px] font-bold text-[#3b0764] shadow-2xs flex items-center gap-1 hover:border-purple-400 transition-all cursor-pointer"
           >
             <span>{currentSortLabel}</span>
-            <ChevronDown className={`w-3.5 h-3.5 absolute right-2.5 top-1/2 -translate-y-1/2 text-purple-700 transition-transform ${isSortOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-3.5 h-3.5 text-[#3b0764] stroke-[2.4] transition-transform ${isSortOpen ? 'rotate-180' : ''}`} />
           </button>
 
           {/* Rounded Dropdown Box Popup */}
