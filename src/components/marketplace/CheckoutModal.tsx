@@ -170,8 +170,9 @@ export const CheckoutModal: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-[11px] text-slate-600 leading-relaxed">
-                ℹ️ <strong>1Fi Security Promise:</strong> Your mutual funds remain in your demat account under your ownership. They will be automatically released upon EMI completion.
+              <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-[11px] text-slate-600 leading-relaxed flex items-start gap-2">
+                <ShieldCheck className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                <span><strong>1Fi Security Promise:</strong> Your mutual funds remain in your demat account under your ownership. They will be automatically released upon EMI completion.</span>
               </div>
             </div>
           )}
