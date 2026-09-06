@@ -89,11 +89,11 @@ export const MarketplaceView: React.FC = () => {
       <div className="flex items-center justify-between pt-1">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight">Market Place</h2>
         
-        {/* Custom Rounded Dropdown Menu (Exact match to Gurugram dropdown) */}
+        {/* Custom Rounded Dropdown Menu */}
         <div className="relative">
           <button
             onClick={() => setIsSortOpen(!isSortOpen)}
-            className="bg-white border border-purple-300/90 rounded-full px-3 py-1 text-[13px] font-bold text-[#3b0764] shadow-2xs flex items-center gap-1 hover:border-purple-400 transition-all cursor-pointer"
+            className="bg-white border border-slate-200 rounded-full px-3 py-1 text-[13px] font-bold text-[#3b0764] shadow-2xs flex items-center gap-1 hover:border-slate-300 transition-all cursor-pointer"
           >
             <span>{currentSortLabel}</span>
             <ChevronDown className={`w-3.5 h-3.5 text-[#3b0764] stroke-[2.4] transition-transform ${isSortOpen ? 'rotate-180' : ''}`} />
@@ -101,7 +101,7 @@ export const MarketplaceView: React.FC = () => {
 
           {/* Rounded Dropdown Box Popup */}
           {isSortOpen && (
-            <div className="absolute right-0 top-full mt-1.5 w-48 bg-white/95 backdrop-blur-md rounded-2xl border border-purple-200/80 shadow-2xl p-1.5 z-40 space-y-0.5 animate-in fade-in zoom-in-95 duration-150">
+            <div className="absolute right-0 top-full mt-1.5 w-48 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200 shadow-2xl p-1.5 z-40 space-y-0.5 animate-in fade-in zoom-in-95 duration-150">
               {sortOptions.map((option) => {
                 const isSelected = sortBy === option.id;
                 return (
