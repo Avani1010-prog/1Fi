@@ -21,16 +21,22 @@ export const ShopTabBar: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 py-2 px-2 rounded-xl text-center transition-all duration-200 flex flex-col items-center justify-center relative cursor-pointer border ${
-                isActive
-                  ? 'bg-purple-50/90 border-purple-300 text-purple-950 font-bold shadow-sm scale-[1.02]'
-                  : 'bg-slate-50/90 hover:bg-slate-100 border-slate-200 text-slate-800 hover:text-slate-950 font-semibold shadow-xs'
-              }`}
+              className="flex-1 py-2 px-2 rounded-xl text-center transition-colors duration-150 flex flex-col items-center justify-center relative cursor-pointer bg-white border border-slate-200/80 shadow-xs"
             >
-              <span className="text-[12.5px] tracking-tight leading-tight">{tab.label}</span>
-              {isActive && (
-                <span className="w-5 h-0.5 bg-[#2b00c4] rounded-full mt-1"></span>
-              )}
+              <span
+                className={`text-[12.5px] tracking-tight leading-tight transition-colors duration-150 ${
+                  isActive
+                    ? 'text-purple-900 font-bold'
+                    : 'text-slate-800 hover:text-slate-950 font-semibold'
+                }`}
+              >
+                {tab.label}
+              </span>
+              <span
+                className={`w-6 h-0.5 rounded-full mt-1 transition-all duration-150 ${
+                  isActive ? 'bg-[#2b00c4] opacity-100' : 'opacity-0'
+                }`}
+              />
             </button>
           );
         })}
@@ -38,4 +44,5 @@ export const ShopTabBar: React.FC = () => {
     </div>
   );
 };
+
 
